@@ -20,6 +20,7 @@ class BayesianModel(BaseEstimator):
         self.advi_trace = None    # The ADVI trace.
         self.cached_model = None  # The PyMC3 model object.
         self.num_pred = None      # The number of predictor variables (number of columns in X).
+        self.num_out = None       # The number of output variables (number of columns in y).
         self.shared_vars = None   # A dictionary of Theano shared variables.
 
     def create_model(self):
